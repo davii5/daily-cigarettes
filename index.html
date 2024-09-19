@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cigarrillos</title>
+    <link rel="icon" type="image/x-icon" href="nosmoke.ico">
+    <link rel="shortcut icon" type="image/png" href="favicon2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon180x180.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- <li> <img src="nosmoking-modified.png" id="logo"> </li> -->
+            <li id="counterTab" class="tab">Contador</li>
+            <li id="historyTab" class="tab">Historial</li>
+            <li id="chartTab" class="tab">Gráfico</li>
+        </ul>
+    </nav>
+
+    <div id="counterView" class="tab-content">
+        <h2>Contador de Cigarrillos</h2>
+        <div id="counter" class="counter-display">0</div>
+        <button id="addBtn">Añadir</button>
+        <button id="subtractBtn">Restar</button>
+    </div>
+
+    <div id="historyView" class="tab-content">
+        <h2>Historial de Cigarrillos</h2>
+        <ul id="historyList"></ul>
+        <button id="resetHistoryBtn" class="reset-btn">Resetear Historial</button>
+    </div>
+
+    <div id="chartView" class="tab-content">
+        <h2>Gráfico de Cigarrillos</h2>
+        <select id="chartType">
+            <option value="daily">Diario</option>
+            <option value="weekly">Semanal</option>
+            <option value="monthly">Mensual</option>
+            <option value="yearly">Anual</option>
+        </select>
+        <canvas id="cigaretteChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
