@@ -111,7 +111,7 @@ canvas {
 
 /* Ajusta el contenedor de la imagen del logo */
 nav ul li:first-child {
-    margin-right: auto; /* Empuja el resto de los elementos a la derecha */
+    /* margin-right: auto; /* Empuja el resto de los elementos a la derecha */
 }
 
 /* Estilos específicos para la imagen del logo */
