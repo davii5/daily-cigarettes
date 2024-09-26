@@ -12,7 +12,7 @@ const chartTypeSelect = document.getElementById('chartType');
 const cigaretteChartCanvas = document.getElementById('cigaretteChart').getContext('2d');
 const adminPassword = 1234; 
 
-let count = 0; 
+let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0; 
 let history = JSON.parse(localStorage.getItem('cigarettesHistory')) || [];
 let chart;
 let lastAddTime = null;
@@ -207,7 +207,8 @@ function resetHistory() {
 
 addBtn.addEventListener('click', () => {
     count++;
-    reason = null; 
+    reason = null;
+    localStorage.setItem('count', count);
     if (count == 8) {
         reason = prompt('Motivo para saltártelo: ')
     }
