@@ -21,6 +21,7 @@ const subtractionTimeLimit = 3 * 60 * 1000;
 let reason = null; 
 
 counterDisplay.innerText = count; 
+updateCounterColor(); 
 
 function updateCounterColor() {
     if (count >= 1 && count <= 3) {
